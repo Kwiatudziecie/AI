@@ -21,32 +21,13 @@ namespace FinancialMarketPredictor
 
     public enum TrainingAlgorithm
     {
-        /// <summary>
-        /// Backpropagation learning
-        /// </summary>
         Resilient,
-
-        /// <summary>
-        /// Simulated annealing
-        /// </summary>
         Annealing,
-
-        /// <summary>
-        /// Evolutionary learning
-        /// </summary>
         Evolutionary
     }
-    /// <summary>
-    /// Training status delegate
-    /// </summary>
-    /// <param name="iteration">Epoch number</param>
-    /// <param name="error">Error</param>
-    /// <param name="algorithm">Training algorithm</param>
+
     public delegate void TrainingStatus(int iteration, double error, TrainingAlgorithm algorithm);
 
-    /// <summary>
-    /// Class for prediction
-    /// </summary>
     public sealed class PredictIndicators
     {
         #region Constants

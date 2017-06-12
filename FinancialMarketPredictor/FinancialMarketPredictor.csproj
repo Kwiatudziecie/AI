@@ -81,11 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\FinancialIndexes.cs" />
-    <Compile Include="Entities\InterestRate.cs" />
     <Compile Include="Entities\FinancialPredictorManager.cs" />
-    <Compile Include="Entities\Orlen.cs" />
+    <Compile Include="Entities\Idx.cs" />
     <Compile Include="Entities\PredictionResults.cs" />
-    <Compile Include="Entities\Lotos.cs" />
     <Compile Include="PredictIndicators.cs" />
     <Compile Include="Utilities\CSVReader.cs" />
     <Compile Include="Utilities\CSVWriter.cs" />

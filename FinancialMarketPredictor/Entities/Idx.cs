@@ -2,17 +2,17 @@
 
 namespace FinancialMarketPredictor.Entities
 {
-    public class Orlen : IComparable<Orlen>
+    public class Idx : IComparable<Idx>
     {
-        public Orlen(double amount, DateTime date)
+        public Idx(double rate, DateTime date)
         {
-            Amount = amount;
+            Rate = rate;
             Date = date;
         }
 
         #region Properties
         
-        public double Amount {get; set;}
+        public double Rate {get; set;}
         
         public DateTime Date {get; set;}
 
@@ -20,7 +20,7 @@ namespace FinancialMarketPredictor.Entities
 
         #region IComparable<Orlen> Members
         
-        public int CompareTo(Orlen other)
+        public int CompareTo(Idx other)
         {
             return Date.CompareTo(other.Date);
         }
