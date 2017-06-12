@@ -40,6 +40,7 @@ namespace FinancialMarketPredictor
             this._gbPredict = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this._dtpPredictTo = new System.Windows.Forms.DateTimePicker();
+            this._btnLoad = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this._dtpPredictFrom = new System.Windows.Forms.DateTimePicker();
             this._btnSaveResults = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@ namespace FinancialMarketPredictor
             this.Epoch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Error = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrainingAlgorithm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._btnLoad = new System.Windows.Forms.Button();
             this._tbPathToLotos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this._nudHiddenUnits = new System.Windows.Forms.NumericUpDown();
@@ -97,7 +97,7 @@ namespace FinancialMarketPredictor
             // _tbPathToOrlen
             // 
             this._tbPathToOrlen.Location = new System.Drawing.Point(23, 56);
-            this._tbPathToOrlen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._tbPathToOrlen.Margin = new System.Windows.Forms.Padding(6);
             this._tbPathToOrlen.Name = "_tbPathToOrlen";
             this._tbPathToOrlen.Size = new System.Drawing.Size(455, 29);
             this._tbPathToOrlen.TabIndex = 1;
@@ -116,7 +116,7 @@ namespace FinancialMarketPredictor
             // _tbPathToPR
             // 
             this._tbPathToPR.Location = new System.Drawing.Point(571, 56);
-            this._tbPathToPR.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._tbPathToPR.Margin = new System.Windows.Forms.Padding(6);
             this._tbPathToPR.Name = "_tbPathToPR";
             this._tbPathToPR.Size = new System.Drawing.Size(455, 29);
             this._tbPathToPR.TabIndex = 4;
@@ -130,7 +130,7 @@ namespace FinancialMarketPredictor
             this._tbMain.Controls.Add(this.tabPage1);
             this._tbMain.Controls.Add(this.tabPage2);
             this._tbMain.Location = new System.Drawing.Point(23, 176);
-            this._tbMain.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._tbMain.Margin = new System.Windows.Forms.Padding(6);
             this._tbMain.Name = "_tbMain";
             this._tbMain.SelectedIndex = 0;
             this._tbMain.Size = new System.Drawing.Size(1420, 567);
@@ -144,9 +144,9 @@ namespace FinancialMarketPredictor
             this.tabPage1.Controls.Add(this._btnPredict);
             this.tabPage1.Controls.Add(this._dgvPredictionResults);
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(6);
             this.tabPage1.Size = new System.Drawing.Size(1412, 530);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Predict";
@@ -159,9 +159,9 @@ namespace FinancialMarketPredictor
             this._gbPredict.Controls.Add(this.label5);
             this._gbPredict.Controls.Add(this._dtpPredictFrom);
             this._gbPredict.Location = new System.Drawing.Point(11, 10);
-            this._gbPredict.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._gbPredict.Margin = new System.Windows.Forms.Padding(6);
             this._gbPredict.Name = "_gbPredict";
-            this._gbPredict.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._gbPredict.Padding = new System.Windows.Forms.Padding(6);
             this._gbPredict.Size = new System.Drawing.Size(1385, 111);
             this._gbPredict.TabIndex = 13;
             this._gbPredict.TabStop = false;
@@ -180,10 +180,22 @@ namespace FinancialMarketPredictor
             // 
             this._dtpPredictTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this._dtpPredictTo.Location = new System.Drawing.Point(532, 58);
-            this._dtpPredictTo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._dtpPredictTo.Margin = new System.Windows.Forms.Padding(6);
             this._dtpPredictTo.Name = "_dtpPredictTo";
             this._dtpPredictTo.Size = new System.Drawing.Size(455, 29);
             this._dtpPredictTo.TabIndex = 14;
+            // 
+            // _btnLoad
+            // 
+            this._btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._btnLoad.Location = new System.Drawing.Point(1072, 45);
+            this._btnLoad.Margin = new System.Windows.Forms.Padding(6);
+            this._btnLoad.Name = "_btnLoad";
+            this._btnLoad.Size = new System.Drawing.Size(268, 42);
+            this._btnLoad.TabIndex = 3;
+            this._btnLoad.Text = "Load Neural Network";
+            this._btnLoad.UseVisualStyleBackColor = true;
+            this._btnLoad.Click += new System.EventHandler(this.BtnLoadClick);
             // 
             // label5
             // 
@@ -199,7 +211,7 @@ namespace FinancialMarketPredictor
             // 
             this._dtpPredictFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this._dtpPredictFrom.Location = new System.Drawing.Point(11, 58);
-            this._dtpPredictFrom.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._dtpPredictFrom.Margin = new System.Windows.Forms.Padding(6);
             this._dtpPredictFrom.Name = "_dtpPredictFrom";
             this._dtpPredictFrom.Size = new System.Drawing.Size(455, 29);
             this._dtpPredictFrom.TabIndex = 14;
@@ -208,7 +220,7 @@ namespace FinancialMarketPredictor
             // 
             this._btnSaveResults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnSaveResults.Location = new System.Drawing.Point(1045, 465);
-            this._btnSaveResults.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._btnSaveResults.Margin = new System.Windows.Forms.Padding(6);
             this._btnSaveResults.Name = "_btnSaveResults";
             this._btnSaveResults.Size = new System.Drawing.Size(204, 42);
             this._btnSaveResults.TabIndex = 4;
@@ -220,7 +232,7 @@ namespace FinancialMarketPredictor
             // 
             this._btnPredict.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnPredict.Location = new System.Drawing.Point(1260, 465);
-            this._btnPredict.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._btnPredict.Margin = new System.Windows.Forms.Padding(6);
             this._btnPredict.Name = "_btnPredict";
             this._btnPredict.Size = new System.Drawing.Size(138, 42);
             this._btnPredict.TabIndex = 2;
@@ -244,7 +256,7 @@ namespace FinancialMarketPredictor
             this.PredictedPIR,
             this.ErrorDifference});
             this._dgvPredictionResults.Location = new System.Drawing.Point(11, 134);
-            this._dgvPredictionResults.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._dgvPredictionResults.Margin = new System.Windows.Forms.Padding(6);
             this._dgvPredictionResults.Name = "_dgvPredictionResults";
             this._dgvPredictionResults.Size = new System.Drawing.Size(1385, 321);
             this._dgvPredictionResults.TabIndex = 1;
@@ -305,9 +317,9 @@ namespace FinancialMarketPredictor
             this.tabPage2.Controls.Add(this._btnStartTraining);
             this.tabPage2.Controls.Add(this._dgvTrainingResults);
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(6);
             this.tabPage2.Size = new System.Drawing.Size(1412, 530);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Train";
@@ -319,9 +331,9 @@ namespace FinancialMarketPredictor
             this._gbTrain.Controls.Add(this.label3);
             this._gbTrain.Controls.Add(this._dtpTrainFrom);
             this._gbTrain.Location = new System.Drawing.Point(16, 10);
-            this._gbTrain.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._gbTrain.Margin = new System.Windows.Forms.Padding(6);
             this._gbTrain.Name = "_gbTrain";
-            this._gbTrain.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._gbTrain.Padding = new System.Windows.Forms.Padding(6);
             this._gbTrain.Size = new System.Drawing.Size(1375, 111);
             this._gbTrain.TabIndex = 12;
             this._gbTrain.TabStop = false;
@@ -330,7 +342,7 @@ namespace FinancialMarketPredictor
             // 
             this._dtpTrainUntil.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this._dtpTrainUntil.Location = new System.Drawing.Point(522, 58);
-            this._dtpTrainUntil.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._dtpTrainUntil.Margin = new System.Windows.Forms.Padding(6);
             this._dtpTrainUntil.Name = "_dtpTrainUntil";
             this._dtpTrainUntil.Size = new System.Drawing.Size(455, 29);
             this._dtpTrainUntil.TabIndex = 14;
@@ -359,7 +371,7 @@ namespace FinancialMarketPredictor
             // 
             this._dtpTrainFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this._dtpTrainFrom.Location = new System.Drawing.Point(11, 58);
-            this._dtpTrainFrom.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._dtpTrainFrom.Margin = new System.Windows.Forms.Padding(6);
             this._dtpTrainFrom.Name = "_dtpTrainFrom";
             this._dtpTrainFrom.Size = new System.Drawing.Size(455, 29);
             this._dtpTrainFrom.TabIndex = 11;
@@ -368,7 +380,7 @@ namespace FinancialMarketPredictor
             // 
             this._btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnExport.Location = new System.Drawing.Point(1258, 465);
-            this._btnExport.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._btnExport.Margin = new System.Windows.Forms.Padding(6);
             this._btnExport.Name = "_btnExport";
             this._btnExport.Size = new System.Drawing.Size(138, 42);
             this._btnExport.TabIndex = 3;
@@ -380,7 +392,7 @@ namespace FinancialMarketPredictor
             // 
             this._btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnStop.Location = new System.Drawing.Point(1110, 465);
-            this._btnStop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._btnStop.Margin = new System.Windows.Forms.Padding(6);
             this._btnStop.Name = "_btnStop";
             this._btnStop.Size = new System.Drawing.Size(138, 42);
             this._btnStop.TabIndex = 2;
@@ -392,7 +404,7 @@ namespace FinancialMarketPredictor
             // 
             this._btnStartTraining.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._btnStartTraining.Location = new System.Drawing.Point(961, 465);
-            this._btnStartTraining.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._btnStartTraining.Margin = new System.Windows.Forms.Padding(6);
             this._btnStartTraining.Name = "_btnStartTraining";
             this._btnStartTraining.Size = new System.Drawing.Size(138, 42);
             this._btnStartTraining.TabIndex = 1;
@@ -411,7 +423,7 @@ namespace FinancialMarketPredictor
             this.Error,
             this.TrainingAlgorithm});
             this._dgvTrainingResults.Location = new System.Drawing.Point(16, 134);
-            this._dgvTrainingResults.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._dgvTrainingResults.Margin = new System.Windows.Forms.Padding(6);
             this._dgvTrainingResults.Name = "_dgvTrainingResults";
             this._dgvTrainingResults.Size = new System.Drawing.Size(1379, 321);
             this._dgvTrainingResults.TabIndex = 0;
@@ -434,22 +446,10 @@ namespace FinancialMarketPredictor
             this.TrainingAlgorithm.HeaderText = "Training Algorithm";
             this.TrainingAlgorithm.Name = "TrainingAlgorithm";
             // 
-            // _btnLoad
-            // 
-            this._btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._btnLoad.Location = new System.Drawing.Point(1075, 45);
-            this._btnLoad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this._btnLoad.Name = "_btnLoad";
-            this._btnLoad.Size = new System.Drawing.Size(268, 42);
-            this._btnLoad.TabIndex = 3;
-            this._btnLoad.Text = "Load Neural Network";
-            this._btnLoad.UseVisualStyleBackColor = true;
-            this._btnLoad.Click += new System.EventHandler(this.BtnLoadClick);
-            // 
             // _tbPathToLotos
             // 
             this._tbPathToLotos.Location = new System.Drawing.Point(23, 126);
-            this._tbPathToLotos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._tbPathToLotos.Margin = new System.Windows.Forms.Padding(6);
             this._tbPathToLotos.Name = "_tbPathToLotos";
             this._tbPathToLotos.Size = new System.Drawing.Size(455, 29);
             this._tbPathToLotos.TabIndex = 8;
@@ -468,7 +468,7 @@ namespace FinancialMarketPredictor
             // _nudHiddenUnits
             // 
             this._nudHiddenUnits.Location = new System.Drawing.Point(1140, 57);
-            this._nudHiddenUnits.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._nudHiddenUnits.Margin = new System.Windows.Forms.Padding(6);
             this._nudHiddenUnits.Name = "_nudHiddenUnits";
             this._nudHiddenUnits.Size = new System.Drawing.Size(297, 29);
             this._nudHiddenUnits.TabIndex = 11;
@@ -477,7 +477,7 @@ namespace FinancialMarketPredictor
             // _nudHiddenLayers
             // 
             this._nudHiddenLayers.Location = new System.Drawing.Point(1140, 128);
-            this._nudHiddenLayers.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this._nudHiddenLayers.Margin = new System.Windows.Forms.Padding(6);
             this._nudHiddenLayers.Name = "_nudHiddenLayers";
             this._nudHiddenLayers.Size = new System.Drawing.Size(297, 29);
             this._nudHiddenLayers.TabIndex = 12;
@@ -519,7 +519,7 @@ namespace FinancialMarketPredictor
             this.Controls.Add(this._labPathToPR);
             this.Controls.Add(this._tbPathToOrlen);
             this.Controls.Add(this._labPathToLotos);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "WinFinancialMarketPredictor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";

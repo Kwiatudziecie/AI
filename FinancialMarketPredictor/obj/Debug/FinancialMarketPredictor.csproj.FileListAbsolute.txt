@@ -6,3 +6,11 @@ C:\Users\moot\Desktop\FinancialMarketPredictorArticle\FinancialMarketPredictor\o
 C:\Users\moot\Desktop\FinancialMarketPredictorArticle\FinancialMarketPredictor\obj\Debug\FinancialMarketPredictor.csproj.GenerateResource.Cache
 C:\Users\moot\Desktop\FinancialMarketPredictorArticle\FinancialMarketPredictor\obj\Debug\FinancialMarketPredictor.exe
 C:\Users\moot\Desktop\FinancialMarketPredictorArticle\FinancialMarketPredictor\obj\Debug\FinancialMarketPredictor.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\AI_2\FinancialMarketPredictor\obj\Debug\FinancialMarketPredictor.exe
+\\Mac\Home\Documents\Visual Studio 2015\Projects\AI_2\FinancialMarketPredictor\obj\Debug\FinancialMarketPredictor.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\AI_2\FinancialMarketPredictor\bin\Debug\FinancialMarketPredictor.exe
+\\Mac\Home\Documents\Visual Studio 2015\Projects\AI_2\FinancialMarketPredictor\bin\Debug\FinancialMarketPredictor.pdb
+\\Mac\Home\Documents\Visual Studio 2015\Projects\AI_2\FinancialMarketPredictor\obj\Debug\FinancialMarketPredictor.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\Visual Studio 2015\Projects\AI_2\FinancialMarketPredictor\obj\Debug\FinancialMarketPredictor.Properties.Resources.resources
+\\Mac\Home\Documents\Visual Studio 2015\Projects\AI_2\FinancialMarketPredictor\obj\Debug\FinancialMarketPredictor.WinFinancialMarketPredictor.resources
+\\Mac\Home\Documents\Visual Studio 2015\Projects\AI_2\FinancialMarketPredictor\obj\Debug\FinancialMarketPredictor.csproj.GenerateResource.Cache
