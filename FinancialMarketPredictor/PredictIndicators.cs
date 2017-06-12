@@ -47,7 +47,6 @@ namespace FinancialMarketPredictor
         private string _pathtorates;
         private string _pathToOrlen;
         private int _trainingSize = 1000;
-
         #endregion
         public bool Loaded { get; private set; }
 
@@ -60,8 +59,6 @@ namespace FinancialMarketPredictor
         public DateTime MinIndexDate => _manager?.MinDate ?? DateTime.MaxValue;
 
         #region Constructors
-
-
         public PredictIndicators(string pathToLotos, string pathToPrimeRates, string pathToOrlen, int hiddenUnits, int hiddenLayers)
         {
             if (!File.Exists(pathToLotos))
@@ -82,7 +79,6 @@ namespace FinancialMarketPredictor
             HiddenLayers = hiddenLayers;
             HiddenUnits = hiddenUnits;
         }
-
         #endregion
 
         public void ReloadFiles(string pathToSp500, string pathToPrimeRates, string pathToNasdaq)

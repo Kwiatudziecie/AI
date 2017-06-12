@@ -363,6 +363,7 @@ namespace FinancialMarketPredictor
             }
             using (OpenFileDialog ofd = new OpenFileDialog() { FileName = "predictor.ntwrk", Filter = Resources.NtwrkFilter })
             {
+                bool result = true; 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     try
@@ -374,6 +375,7 @@ namespace FinancialMarketPredictor
                     catch (System.Security.SecurityException)
                     {
                         MessageBox.Show(Resources.SecurityExceptionFolderLevel, Resources.Exception, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        result = false; 
                     }
                     catch
                     {
@@ -381,6 +383,11 @@ namespace FinancialMarketPredictor
                         return;
                     }
                 }
+                if (result)
+                {
+                    MessageBox.Show("The file with the trained data loaded successfully.");
+                }
+
             }
         }
         
