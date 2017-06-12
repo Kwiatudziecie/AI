@@ -522,7 +522,8 @@ namespace FinancialMarketPredictor
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "WinFinancialMarketPredictor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "Artificial Intelligence Fundamentals - artificial neural networks to prediction s" +
+    "tock trends";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WinFinancialMarketPredictorFormClosing);
             this.Load += new System.EventHandler(this.WinFinancialMarketPredictorLoad);
             this._tbMain.ResumeLayout(false);
